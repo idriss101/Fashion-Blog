@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: #f0f0f0ec;
+}
+
+nav {
+    width: 100vw;
+}
+
+nav .container-nav {
+    background-color: #202021;
+    height: 5rem;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 60%;
+    background-color: white;
+    position: relative;
+    padding: 0;
+}
+
+.navigation {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin-top: -7px;
+    width: 98%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+}
+
+.navigation ul li {
+    margin-right: 2.5rem;
+    transition: all .5s;
+    display: inline-block;
+}
+
+.navigation ul li a:hover {
+    background-color: lightgrey;
+    color: black;
+}
+
+.navigation a:visited {
+    color: white;
+}
+
+.navigation a {
+    padding: 10rem .5rem 1rem .5rem;
+    color: white;
+    padding: 1.5rem;
+    transition: all .5s;
+}
+
+.search {
+    align-self: flex-end;
+}
+
+#search-input {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 3rem;
+    padding: 1.5rem;
+    border: none;
+    cursor: pointer;
+    color: black;
+    z-index: 1;
+    transition: width 1s ease;
+    float: right;
+}
+
+#search-input:focus {
+    outline: none;
+}
+
+#search-btn {
+    font-size: 1.5rem;
+    position: absolute;
+    top: -.25rem;
+    right: .2rem;
+    z-index: 3;
+    color: black;
+    cursor: pointer;
+}
+
+.wide {
+    width: 80%;
+}
+
+.header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10rem;
+    padding-bottom: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header h1 {
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 2rem;
+}
+
+.header p {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.carousel {
+    margin-top: 10rem;
+
+}
+
+.carousel-item {
+    height: 100rem;
+}
+
+.carousel-item img {
+    height: 100rem;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f0f0f0ec;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+.left {
+    width: 70%;
+    text-align: center;
+    margin-top: 7rem;
+    margin-right: 3rem;
+    padding-left: 4rem;
+}
+
+.right {
+    width: 30%;
+    margin-top: 7rem;
+    padding-right: 4rem;
+}
+
+.post {
+    background-color: white;
+    padding: 10rem 3rem 5rem 3rem;
+    margin-bottom: 5rem;
+    position: relative;
+    transition: all .5s;
+}
+
+.post h2 {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+.title {
+    position: absolute;
+    top: 3rem;
+    left: 40%;
+}
+
+.post p {
+    text-align: left;
+    line-height: 2;
+    font-size: 2rem;
+}
+
+.post-img {
+    margin: 0 auto;
+    display: block;
+    width: 80%;
+    height: 50rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.post-img-1 {
+    background-image: url('../img/postphoto-1.jfif');
+}
+
+.post-img-2 {
+    background-image: url('../img/postphoto-2.jfif');
+}
+
+.post-img-3 {
+    background-image: url('../img/postphoto-3.jfif');
+}
+
+.post-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.post-comments {
+    border-top: 1px solid lightgrey;
+    margin-top: -5rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    transition: all .3s;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    background-color: white;
+}
+
+.post-comments img {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 100%;
+    float: left;
+    margin-right: 2rem;
+    margin-top: 0rem;
+    background-position: center;
+    background-size: cover;
+}
+
+.post-comments p {
+    font-size: 1.6rem;
+    margin-top: -.5rem;
+    margin-left: 2rem;
+}
+
+.post-comments input {
+    padding: 1rem 3rem;
+    width: 50%;
+}
+
+.comment-input {
+    display: inline-block;
+    width: 100%;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    transition: all 0.5s;
+}
+
+.post-comment-content {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    transition: all .5s ease-in;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.like {
+    background-color: white;
+    color: black;
+    padding: .5rem 2.5rem;
+    font-weight: 500;
+    border: .5px solid lightgrey;
+    transition: all .3s;
+}
+
+.like:hover {
+    background-color: rgb(170, 170, 170);
+}
+
+.like i {
+    font-size: 1.4rem;
+    padding-right: .5rem;
+}
+
+.clear {
+    clear: both;
+}
+
+.reply {
+    background-color: black;
+    color: white;
+    padding: 1rem 2.5rem;
+    font-weight: 500;
+    border: none;
+}
+
+.black {
+    color: black;
+    font-weight: 600;
+}
+
+.white {
+    background-color: white;
+    color: black;
+    padding: .2rem 1rem;
+    margin-left: 1rem;
+}
+
+.info {
+    background-color: black;
+    color: white;
+    padding: 2rem;
+    width: 100%;
+}
+
+.info h3 {
+    padding-bottom: 2rem;
+}
+
+.info-img {
+    background-image: url('../img/infophoto-1.jfif');
+    width: 100%;
+    height: 30rem;
+    padding: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.popular-posts {
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.right-title {
+    background-color: black;
+    color: white;
+    padding: 1.5rem 2rem;
+}
+
+.right-title h3 {
+    font-size: 2rem;
+}
+
+.popular-list {
+    background-color: white;
+}
+
+.popular-list div {
+    padding: 1rem 1rem;
+    border-bottom: 1px solid lightgray;
+    font-size: 1.6rem;
+    transition: all .3s;
+}
+
+.popular-list div:hover {
+    background-color: #f0f0f0ec;
+}
+
+.popular-list div h4 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.popular-list div img {
+    width: 4em;
+    height: 5rem;
+    float: left;
+    margin-right: 2rem;
+}
+
+.popular-list-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.ad-content-container {
+    background-color: white;
+    text-align: center;
+    height: 20rem;
+    position: relative;
+}
+
+#ad-content {
+    position: absolute;
+    width: 95%;
+    height: 90%;
+    top: 1rem;
+    left: 1rem;
+    padding-top: 6rem;
+    background-color: #f0f0f0ec;
+}
+
+.tags {
+    margin-top: 3rem;
+}
+
+.tag-container {
+    background-color: white;
+    text-align: center;
+}
+
+.tag-container ul {
+    list-style: none;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.tag-container ul li {
+    font-size: 1.4rem;
+    display: inline;
+    background-color: #f0f0f0ec;
+    margin-right: 1rem;
+    padding: 0rem 1.5rem;
+    transition: all .3s;
+}
+
+.tag-container ul li:hover {
+    background-color: black;
+    color: white;
+    transform: scaleY(2);
+}
+
+.inspiration {
+    margin-top: 3rem;
+}
+
+.insp-container {
+    background-color: white;
+    /* padding-left: 2rem; */
+    text-align: center;
+}
+
+.insp-container img {
+    width: 40%;
+    height: 40%;
+    margin: 1rem;
+}
+
+.subscribe {
+    margin-top: 3rem;
+
+}
+
+.sub-container {
+    background-color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.sub-container input {
+    display: block;
+    border: 1px solid lightgray;
+    width: 90%;
+    padding: .4rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.sub-container a {
+    display: block;
+    color: white;
+    width: 90%;
+    background-color: #eb4034;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    padding: .5rem 2rem;
+    transition: all .3s;
+}
+
+.sub-container a:hover {
+    text-decoration: none;
+    background-color: rgb(196, 39, 28);
+}
+
+.footer {
+    width: 100%;
+    height: 10rem;
+    background-color: gray;
+}
+
+.top {
+    color: white;
+    font-size: 1.6rem;
+    background-color: black;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    display: inline-block;
+    transition: all .3s;
+}
+
+.top:hover {
+    background-color: #545454;
+}
+
+.top i {
+    margin-right: 1rem;
+}
